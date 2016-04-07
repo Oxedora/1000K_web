@@ -1,0 +1,17 @@
+<form>
+	<input name="valeur" type="search"></input>
+	
+	<select name="tri">
+		<option value="" selected>Sans tri</option>
+		<option value="date">Par date</option>
+		<option value="1">Par statut résolu</option>
+		<option value="0">Par statut non résolu</option>
+		<option value="cle">Par mot clef</option>
+	</select>
+	
+	<input type="submit" value="rechercher"></input>
+</form>
+
+<div id="listeQuestions">
+	%listeQues%
+</div>

@@ -1,0 +1,21 @@
+<?php
+
+	/**
+	* Localisations des vues
+	*/
+	
+	$index
+	$bandeau
+	$onglets
+	$menu
+	$accueil
+	$commentaire_technote
+	$consulter_question
+	$consulter_technote
+	$depot_question
+	$depot_technote
+	$gestion_compte
+	$reponse_question
+	$footer
+	
+?>

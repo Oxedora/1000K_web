@@ -1,0 +1,10 @@
+<?php
+
+include("fonctions.php");
+
+if(!isset($_SESSION["role"])){
+	echo recupererHTML("../html/interdit.html");
+	return 1;
+}
+
+?>

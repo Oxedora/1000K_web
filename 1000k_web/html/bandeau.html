@@ -1,0 +1,24 @@
+<div id="header">
+
+	<div class="logo" id="divLogo">
+		<img id="logoSite" src='../img/ubuntu-logo.png' alt="des gens heureux"/>
+	</div>
+
+	<div class="searchBar" id="divSearch">
+		<form method="post" action="recherche.php">
+			<input id="search" type="search" name="query" placeholder="rechercher une technote" size="20" />
+			<button>rechercher</button>
+		</form>
+	</div>
+	
+	<!-- Permet la connexion ou l'inscription d'un visiteur -->
+	<!-- Affiche un message de bienvenue pour les utilisateurs -->
+	<div id="logPanel">
+		%espaceConnexion%
+	</div>
+	%modalInscription%
+	
+	%modalConnexion%
+
+	%modalConfirmation%
+</div>
