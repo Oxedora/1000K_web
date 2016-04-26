@@ -1,0 +1,6 @@
+<form method="GET">
+	<table>
+		%champs%
+	</table>
+	<input type="submit" value="Valider">
+</form>

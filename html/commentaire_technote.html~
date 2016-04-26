@@ -1,0 +1,7 @@
+<form method="POST">
+	<label for="commentaire">Votre commentaire </label>
+	<textarea id="commentaire" name="commentaire" cols="60" rows="10" placeholder="Votre commentaire" required></textarea>
+	<br>
+  <input type="hidden" name="technote" value=%id%>
+	<input type="submit" value="valider"></input>
+</form>

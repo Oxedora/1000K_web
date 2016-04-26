@@ -1,0 +1,27 @@
+<form method="post">
+	<fieldset>
+		<legend>Changer d'e-mail</legend>
+		<label for="email">Nouvel e-mail</label>
+		<input type="text" id="email" name="email" placeholder="nouvel email"/>
+		
+		<label for="mdp">Confirmation du mot de passe</label>
+		<input type="password" id="mdp" name="mdp" placeholder="*******" required/>
+		
+		<input type="submit" value="Valider"/>
+	</fieldset>
+</form>
+
+<form method="post">
+	<fieldset>
+		<legend>Changer de mot de passe</legend>
+		<label for="ancien">Ancien mot de passe</label>
+		<input type="password" id="ancien" name="ancien" placeholder="*******" required/>
+		
+		<label for="nouveau1">Nouveau mot de passe</label>
+		<input type="password" id="nouveau1" name="nouv1" placeholder="*******" required/>
+		
+		<label for="nouveau2">Confirmation nouveau mot de passe</label>
+		<input type="password" id="nouveau2" name="nouv2" placeholder="*******" required/>
+		<input type="submit" value="Valider"/>
+	</fieldset>
+</form>

@@ -1,0 +1,39 @@
+<?php
+
+	require_once("utils.php");
+	require_once("fonctions.php");
+
+	$id = 1;
+
+	$message = "";
+
+	if(isset($_POST["commentaire"])){
+		$requete = $dbh->prepare("SELECT MAX(ordre) FROM commentaire WHERE technote = :id");
+		$requete->bindValue(':id', $id);
+		$ordre = $requete->execute();
+		
+		$ordre = ($ordre == NULL ? 1 : $ordre + 1);
+		
+		$requete = $dbh->prepare("INSERT INTO commentaire VALUES (:ordre, :technote, :contenu, :auteur, :date)");
+		$requete->bindValue(':ordre', $ordre+1);
+		$requete->bindValue(':technote', $id);
+		$requete->bindValue(':contenu', $_POST["commentaire"]);
+		$requete->bindValue(':auteur', $_SESSION["pseudo"]);
+		$requete->bindValue(':date', date("o-m-d"));
+		
+		$ajout = $requete->execute();
+		
+		$message = ($ajout ? "Votre commentaire a bien été publié." : "Une erreur est survenue.");
+	}
+	
+	$html = recupererHTML("../html/commentaire_technote.html");
+	 
+	$remplacement = array(
+	  '%id%' 			=> $id,
+	  '%message%'		=> $message
+	);
+	
+	$html = str_replace(array_keys($remplacement), array_values($remplacement), $html);
+	 
+	echo $html;
+?>
